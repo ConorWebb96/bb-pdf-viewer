@@ -1,0 +1,59 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "bb-pdf-viewer",
+    "friendlyName": "bb-pdf-viewer",
+    "description": "A component to allow the displaying and viewing of PDFs within Budibase.",
+    "icon": "Images",
+    "settings": [
+      {
+        "type": "select",
+        "label": "Select",
+        "key": "usage",
+        "defaultValue": "single",
+        "options": [
+          "single",
+          "multi"
+        ]
+      },
+      {
+        "type": "dataProvider",
+        "label": "Data provider",
+        "key": "dataProvider",
+        "dependsOn": {
+          "setting": "usage",
+          "value": "multi"
+        }
+      },
+      {
+        "type": "text",
+        "label": "URL",
+        "key": "url",
+        "dependsOn": {
+          "setting": "usage",
+          "value": "single"
+        }
+      },
+      {
+        "type": "text",
+        "label": "Name",
+        "key": "name",
+        "dependsOn": {
+          "setting": "usage",
+          "value": "single"
+        }
+      },
+      {
+        "type": "text",
+        "label": "Width",
+        "key": "width"
+      },
+      {
+        "type": "text",
+        "label": "Height",
+        "key": "height"
+      }
+    ]
+  }
+}
